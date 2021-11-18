@@ -5,6 +5,9 @@ export type NotionTextTypes =
   | 'heading_3'
   | 'paragraph';
 
+export type HtmlImgTags = 'figure' | 'img';
+export type NotionImgTypes = 'image';
+
 export const textTagNameToNotionTypeMap = new Map<
   HtmlTextTags,
   NotionTextTypes
@@ -16,4 +19,14 @@ export const textTagNameToNotionTypeMap = new Map<
   ['h5', 'heading_3'],
   ['h6', 'heading_3'],
   ['p', 'paragraph'],
+  ['p', 'paragraph'],
+  ['p', 'paragraph'],
+]);
+
+export const imgTagNameToNotionTypeMap = new Map<
+    HtmlImgTags,
+    NotionImgTypes
+    >([
+        ['figure', 'image'],
+        ['img','image']
 ]);
